@@ -9,6 +9,8 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle[hash].js', // evitar cache do navegador, gerando sempre com nome diferente
   },
+  mode: 'development',
+
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public', 'index.html')
@@ -19,10 +21,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: 'babel-loader'
       }
     ],
+  },
+
+  devServer: {
+    port: 3000,
   }
 };
