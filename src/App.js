@@ -3,7 +3,11 @@ import React from "react";
 import Post from './Post';
 import Header from "./Header";
 
-const tituloZeroUm = 'Atividades 01'
+const posts = [
+  { title: 'Title#01', subtitle: 'Sub#01', likes: 10},
+  { title: 'Title#02', subtitle: 'Sub#02', likes: 20},
+  { title: 'Title#03', subtitle: 'Sub#03', likes: 30},
+]
 
 // Functional Component (Componente Funcional)
 function App() {
@@ -18,29 +22,16 @@ function App() {
 
       <hr />
 
-      <Post
-        likes={20}
-        post={{
-          title: 'Titulo da Atividade 01',
-          subtitle: 'Subtitulo'
-        }}
+      {posts.map(post => (
+        <Post
+          key={post.title}
+          likes={post.likes}
+          post={{
+            title: post.title,
+            subtitle: post.subtitle
+          }}
         />
-      
-      <Post
-        likes={10}
-        post={{
-          title: 'Titulo da Atividade 02',
-          subtitle: 'Subtitulo'
-        }}
-        />
-
-      <Post
-        likes={50}
-        post={{
-          title: 'Titulo da Atividade 03',
-          subtitle: 'Subtitulo'
-        }}
-        />
+      ))}
      
       
     </React.Fragment>
