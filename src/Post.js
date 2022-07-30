@@ -6,6 +6,9 @@ export default function Post(props) {
     <>
       <article>
         <strong>{props.post.title}</strong><br />
+        <button onClick={() => props.onRemove(props.post.id)}>
+          Remover
+        </button>
         <small>{props.post.subtitle}</small>
         <br />
         Media: {props.likes / 2}
@@ -20,7 +23,9 @@ export default function Post(props) {
 // shape -> objeto
 Post.propTypes = {
   likes: PropTypes.number.isRequired,
+  onRemove: PropTypes.func.isRequired,
   post: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
   }).isRequired,
