@@ -1,6 +1,7 @@
 import React from "react";
 
 import Post from './Post';
+import Header from "./Header";
 
 const tituloZeroUm = 'Atividades 01'
 
@@ -10,9 +11,10 @@ function App() {
     // Usar React.Fragment no lugar de dev/span/etc, assim nao aparece no source.
     // pode usar <> também
     <React.Fragment> 
-      <h1>Atividades</h1>
-      <h2>Atividades para fazer</h2>
-
+      
+      <Header title="Atividades">
+        <h2>Atividades para fazer</h2>
+      </Header>
 
       <hr />
 
@@ -30,18 +32,13 @@ function App() {
         }}
         />
 
-<Post
+      <Post
         post={{
           title: 'Titulo da Atividade 03',
           subtitle: 'Subtitulo'
         }}
         />
      
-      
-      {/* <Post
-        title="Titulo da Atividade 1"
-        subtitle="Subtitulo da Atividade"
-        /> */}
       
     </React.Fragment>
     
