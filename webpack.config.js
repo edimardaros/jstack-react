@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path')
 
 module.exports = {
@@ -5,5 +6,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle[hash].js', // evitar cache do navegador, gerando sempre com nome diferente
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'public', 'index.html')
+    })
+  ]
 };
