@@ -12,13 +12,14 @@ function App() {
     // pode usar <> também
     <React.Fragment> 
       
-      <Header title="Atividades">
+      <Header>
         <h2>Atividades para fazer</h2>
       </Header>
 
       <hr />
 
       <Post
+        likes={20}
         post={{
           title: 'Titulo da Atividade 01',
           subtitle: 'Subtitulo'
@@ -26,6 +27,7 @@ function App() {
         />
       
       <Post
+        likes={10}
         post={{
           title: 'Titulo da Atividade 02',
           subtitle: 'Subtitulo'
@@ -33,6 +35,7 @@ function App() {
         />
 
       <Post
+        likes={50}
         post={{
           title: 'Titulo da Atividade 03',
           subtitle: 'Subtitulo'
