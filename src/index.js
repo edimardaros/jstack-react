@@ -1,10 +1,10 @@
-// const user = {};
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-// Old way to do
-// if (user && user.address) {
-//   console.log(user.address.street);
-// }
+ReactDOM.render(
+  <h1 id="title">
+    <span>Olá Mundo</span>
+  </h1>,
 
-// Optional chaining
-// console.log(user?.address?.street);
-
+  document.getElementById('root'), // onde quer renderizar o <h1></h1>
+);
