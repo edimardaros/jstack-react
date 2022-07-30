@@ -8,5 +8,5 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 _reactDom["default"].render( /*#__PURE__*/_react["default"].createElement("h1", {
   id: "title"
-}, /*#__PURE__*/_react["default"].createElement("span", null, "Ol\xE1 Mundo")), document.getElementById('root') // onde quer renderizar o <h1></h1>
+}, /*#__PURE__*/_react["default"].createElement("span", null, "Ol\xE1 Mundo!!")), document.getElementById('root') // onde quer renderizar o <h1></h1>
 );
